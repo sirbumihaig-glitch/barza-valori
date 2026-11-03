@@ -21,3 +21,9 @@ function simplifyCompetitors(){
  const style=document.createElement('style');style.textContent=`.rival-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.rival-card{padding:30px;display:block}.rival-card h4{min-height:0;font-size:28px;margin:0 0 20px}.rival-card .rival-name{font-size:24px;margin-bottom:18px}.rival-edge{margin:20px 0;padding-left:13px}.rival-detail-visible{border-top:1px solid #d2c7cd;padding-top:18px;margin-top:22px}.rival-detail-visible>p{font-size:13px;line-height:1.65;margin:0 0 16px}.rival-detail-visible .rival-limit{color:#625962;font-size:12px}.rival-links{display:flex;gap:8px 18px;flex-wrap:wrap;padding-top:5px}.rival-links a{font-size:11px}.rival-card .rival-head{display:none}@media(max-width:700px){.rival-grid{grid-template-columns:1fr}.rival-card{padding:25px}.rival-card h4{font-size:25px}}`;document.head.appendChild(style);
 }
 if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',simplifyCompetitors);}else{simplifyCompetitors();}
+
+// Update the opening headline while preserving its emphasized second sentence.
+const openingEmphasis = document.querySelector('h1 em');
+if (openingEmphasis) {
+  openingEmphasis.replaceChildren('Un mod de a-ți', document.createElement('br'), 'fi alături.');
+}
