@@ -1,43 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
 :root {
-  --goo-blue: #24556a;
-  --goo-green: #4a6d41;
-  --goo-yellow: #ffd173;
-  --goo-linen: #f9f4e7;
-  --goo-pastel: #dbe4ec;
+  --police-blue: #24556a;
+  --oxley: #759b6b;
+  --dandelion: #ffd173;
+  --linen: #f9f4e7;
+  --khaki: #bdaa92;
+  --pastel-blue: #a8bcd0;
+  --deep-moss: #4a6d41;
+  --boy-red: #857158;
 }
-body, button, input, textarea, blockquote, .you {
-  font-family: Poppins, Arial, sans-serif;
+
+html, body, body * {
+  font-family: Poppins, sans-serif !important;
 }
-body { color: var(--goo-blue); }
+
+html, body, header, footer, main, main section,
+.hero-copy, .hero-art, .value-ribbon, .decision, .team-art,
+.persona-description, .empathy-card, .response-yes, .response-no,
+.purchase-context, .stat-purchase, .rival-card, .comp-price {
+  background: #fff !important;
+}
+
+body, .closing, .hero-art .you, .hero-art .art-label, .hero-art .art-note,
+.response-yes, .response-yes :is(p, h3, h4, li, span, blockquote, a) {
+  color: var(--police-blue) !important;
+}
+
+.hero-art .orbit { border-color: var(--pastel-blue); }
+.hero-art .art-dot { background: var(--pastel-blue); }
+.hero-art .art-square { background: var(--dandelion); }
+.hero-art .art-triangle { border-bottom-color: var(--oxley); }
+.hero-art .art-arch { border-color: var(--khaki); }
+.hero-art .asterisk { color: var(--dandelion); }
+
 h1, h2, h3, h4 { letter-spacing: -.035em; }
 h1, h2 { font-weight: 400; line-height: 1.12; }
 h1 { font-size: clamp(42px, 5vw, 78px); }
-h1 em, h2 em { font-weight: 500; }
-.logo img { width: 100%; height: 100%; object-fit: contain; }
-.hero-copy { background: var(--goo-linen); }
-.hero-art {
-  background: linear-gradient(#24556aeb, #24556ad6), url("water-pattern.webp") center / cover;
-}
-.hero-art .you { font-weight: 500; letter-spacing: -.06em; }
-.hero-art .art-label, .hero-art .art-note { color: white; }
-.button.dark { background: var(--goo-blue); color: white; }
-.button, .nav-cta { border-radius: 4px; }
-.rival-card { background: var(--goo-linen); }
-.rival-card:nth-child(3n+2) { background: var(--goo-pastel); }
-.rival-card:nth-child(3n) { background: #e3ebdf; }
+h1 em, h2 em { color: var(--deep-moss); font-weight: 500; }
 
-/* The supplied GOO Bebe lockup needs a wider frame than the previous logo. */
 header .logo { width: clamp(120px, 14vw, 200px); flex-shrink: 0; }
+.logo img { width: 100%; height: 100%; object-fit: contain; }
 .footer-brand img { display: block; width: 130px; height: auto; }
-.hero-art { background: var(--goo-blue); }
-.hero-art::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("water-pattern.webp") center / cover;
-  opacity: .14;
-  pointer-events: none;
+
+.button, .nav-cta { border-radius: 4px; }
+.button.dark, .closing .button { background: var(--police-blue); color: #fff; }
+.closing .official { color: var(--police-blue); }
+.rival-card { --rival: var(--police-blue) !important; }
+.rival-card:nth-child(3n+2) { --rival: var(--deep-moss) !important; }
+.rival-card:nth-child(3n) { --rival: var(--boy-red) !important; }
+.decision, .team-art, .persona-description, .empathy-card,
+.response-yes, .stat-purchase, .rival-card, .comp-price {
+  box-shadow: inset 0 0 0 1px var(--pastel-blue);
 }
-.rival-card:nth-child(3n+1) { --rival: #24556a !important; }
-.rival-card:nth-child(3n+2) { --rival: #4a6d41 !important; }
-.rival-card:nth-child(3n) { --rival: #24556a !important; }
