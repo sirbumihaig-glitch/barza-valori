@@ -53,3 +53,78 @@ header .logo { width: clamp(120px, 14vw, 200px); flex-shrink: 0; }
 .response-yes, .stat-purchase, .rival-card, .comp-price {
   box-shadow: inset 0 0 0 1px var(--pastel-blue);
 }
+
+/* Brandbook water motif and geometric accents. */
+.hero-art {
+  margin: clamp(16px, 3vw, 48px) clamp(16px, 4.7vw, 76px) clamp(16px, 3vw, 48px) 0;
+  border-radius: 45% 45% 18px 18px;
+  isolation: isolate;
+  border: 1px solid var(--pastel-blue);
+}
+.hero-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("water-pattern.webp") center / cover no-repeat;
+  opacity: .19;
+}
+.hero-art :is(.art-label, .art-note, .art-bottom, .you) {
+  color: var(--police-blue) !important;
+}
+.hero-art .art-label {
+  top: 13%;
+  left: 50%;
+  width: max-content;
+  transform: translateX(-50%);
+}
+.hero-art .you {
+  padding-right: .25em;
+  font-size: clamp(78px, 10vw, 164px);
+  font-weight: 600;
+}
+.hero-art .asterisk { font-size: .42em; right: -.36em; top: 0; }
+.hero-art .orbit { width: 82%; height: 49%; }
+.hero-art .o2 { width: 53%; height: 64%; }
+.hero-art .art-dot { width: 64px; height: 64px; }
+.hero-art .art-square { width: 48px; height: 48px; bottom: 27%; }
+.hero-art .art-arch { right: 14%; bottom: 24%; }
+.hero-art .art-triangle { top: 21%; right: 16%; }
+
+.hero-copy .button.dark {
+  background: var(--dandelion);
+  color: var(--police-blue);
+  box-shadow: 0 8px 22px #24556a19;
+}
+.hero-copy .button.dark:hover { background: color-mix(in srgb, var(--dandelion) 80%, white); }
+.value-ribbon {
+  border-top: 1px solid var(--pastel-blue);
+  border-bottom: 1px solid var(--pastel-blue);
+}
+.value-ribbon > * { color: var(--deep-moss); }
+.value-ribbon > :nth-child(even) { color: var(--police-blue); }
+.persona-description, .empathy-card, .response-yes, .stat-purchase, .rival-card {
+  box-shadow: none;
+  border: 1px solid color-mix(in srgb, var(--pastel-blue) 60%, white);
+}
+.persona-description { border-top: 5px solid var(--person, var(--oxley)); }
+.empathy-card:nth-child(3n+1) { border-top: 3px solid var(--oxley); }
+.empathy-card:nth-child(3n+2) { border-top: 3px solid var(--pastel-blue); }
+.empathy-card:nth-child(3n) { border-top: 3px solid var(--dandelion); }
+.rival-card { border-top: 4px solid var(--rival); }
+.decision, .response-yes, .stat-purchase { border-left: 4px solid var(--oxley); }
+.team-art {
+  background: var(--linen) url("water-pattern.webp") center / cover !important;
+  border: 1px solid var(--pastel-blue);
+}
+.team-caption { background: #fff; padding: 8px 12px; border-radius: 4px; }
+.closing { border-top: 1px solid var(--pastel-blue); }
+.closing em { color: var(--deep-moss); }
+.closing-symbol { color: var(--dandelion); opacity: .4; }
+
+@media (max-width: 760px) {
+  .hero-art { margin: 0 7% 30px; min-height: 440px; border-radius: 34% 34% 16px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy .button:hover { transform: none; }
+}
