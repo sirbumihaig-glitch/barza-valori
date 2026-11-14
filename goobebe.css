@@ -97,3 +97,42 @@ header .logo { width: clamp(120px, 14vw, 200px); flex-shrink: 0; }
   .hero-art { border-left: 0; }
   .hero-art .you { font-size: clamp(72px, 25vw, 120px); }
 }
+
+/* Brandbook accents guide the eye from the introduction to the next step. */
+.hero-art {
+  background: color-mix(in srgb, var(--pastel-blue) 40%, white) !important;
+}
+.hero-art::before {
+  opacity: .52;
+  mix-blend-mode: multiply;
+}
+.hero-art .asterisk { color: var(--dandelion); }
+.hero-copy .button.dark {
+  box-shadow: 0 5px 0 var(--police-blue);
+}
+.hero-copy .button.dark:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 var(--police-blue);
+}
+.value-ribbon > :nth-child(odd) { color: var(--deep-moss); }
+.value-ribbon > :nth-child(even) { color: var(--police-blue); }
+.decision {
+  border-left: 4px solid var(--dandelion);
+  box-shadow: none;
+}
+.persona-description {
+  border-top: 4px solid var(--oxley);
+  box-shadow: none;
+}
+.response-yes {
+  border-left: 4px solid var(--oxley);
+  box-shadow: none;
+}
+.rival-card { border-top: 3px solid var(--rival); }
+.closing .button {
+  background: var(--dandelion);
+  color: var(--police-blue);
+}
+.closing .button:hover {
+  background: color-mix(in srgb, var(--dandelion) 80%, white);
+}
